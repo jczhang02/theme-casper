@@ -28,7 +28,7 @@
             <img th:if="${not #strings.isEmpty(site.logo)}" th:src="${site.logo}" th:alt="${site.title}"/>
             <span th:if="${#strings.isEmpty(site.logo)}" th:text="${site.title}"></span>
           </a>
-          <button class="gh-search gh-icon-btn" aria-label="Search this site" th:if="${pluginFinder.available('PluginSearchWidget')}" onclick="SearchWidget.open()">
+          <button class="gh-search" aria-label="Search this site" th:if="${pluginFinder.available('PluginSearchWidget')}" onclick="SearchWidget.open()">
             <th:block th:replace="~{partials/icons/search}" />
           </button>
           <button class="gh-burger" aria-label="Main Menu"></button>

@@ -434,8 +434,9 @@ production stylesheet in assets/built/screen.css
 .gh-head-menu {
     display: flex;
     align-items: center;
-    margin-top: 1px;
-    font-weight: 500;
+    margin-top: 500px;
+    font-weight: 1000;
+    font-size: 28px;
 }
 
 .gh-head-menu .nav {
@@ -623,6 +624,7 @@ production stylesheet in assets/built/screen.css
     background-color: transparent;
     border: 0;
     outline: none;
+    margin-top: 500px;
 }
 
 .gh-search:hover {

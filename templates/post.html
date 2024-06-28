@@ -14,24 +14,24 @@
         <p class="article-excerpt" th:text="${post.spec.excerpt.raw}">{{custom_excerpt}}</p>
         <div class="article-byline">
           <section class="article-byline-content">
-            <ul class="author-list">
-              <li class="author-list-item" th:each="author : ${post.contributors}">
-                <a th:if="${not #strings.isEmpty(author.avatar)}" href="/" class="author-avatar"
-                  aria-label="Read more of {{name}}">
-                  <img class="author-profile-image" th:src="${author.avatar}" th:alt="${author.displayName}" />
-                </a>
-                <a th:if="${#strings.isEmpty(author.avatar)}" href="/" class="author-avatar author-profile-image"
-                  th:aria-label="|Read more of ${author.displayName}|">
-                  <th:block th:replace="~{partials/icons/avatar}" />
-                </a>
-              </li>
-            </ul>
+            <!-- <ul class="author-list"> -->
+            <!--   <li class="author-list-item" th:each="author : ${post.contributors}"> -->
+            <!--     <a th:if="${not #strings.isEmpty(author.avatar)}" href="/" class="author-avatar" -->
+            <!--       aria-label="Read more of {{name}}"> -->
+            <!--       <img class="author-profile-image" th:src="${author.avatar}" th:alt="${author.displayName}" /> -->
+            <!--     </a> -->
+            <!--     <a th:if="${#strings.isEmpty(author.avatar)}" href="/" class="author-avatar author-profile-image" -->
+            <!--       th:aria-label="|Read more of ${author.displayName}|"> -->
+            <!--       <th:block th:replace="~{partials/icons/avatar}" /> -->
+            <!--     </a> -->
+            <!--   </li> -->
+            <!-- </ul> -->
             <div class="article-byline-meta">
-              <h4 class="author-name"><a th:text="${#strings.listJoin(post.contributors.![displayName],', ')}"></a></h4>
+              <!-- <h4 class="author-name"><a th:text="${#strings.listJoin(post.contributors.![displayName],', ')}"></a></h4> -->
               <div class="byline-meta-content">
                 <time class="byline-meta-date" th:datetime="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"
-                  th:text="${#dates.format(post.spec.publishTime, 'MMM dd, YYYY')}">{{date}}</time>
-                <span class="byline-reading-time"><span class="bull">&bull;</span> 5 mins</span>
+                  th:text="${#dates.format(post.spec.publishTime, 'YYYY 年 MM 月 dd 日')}">{{date}}</time>
+                <!-- <span class="byline-reading-time"><span class="bull">&bull;</span> 5 mins</span> -->
               </div>
             </div>
           </section>
