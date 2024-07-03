@@ -25,12 +25,12 @@
       <div class="post-card-excerpt" th:utext="${post.status.excerpt}"></div>
     </a>
     <footer class="post-card-meta">
-      <time class="post-card-meta-date" th:datetime="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}" th:text="${#dates.format(post.spec.publishTime, 'MMM dd, YYYY')}"></time>
-      <ul class="author-list">
-        <li class="author-list-item">
-          <div class="author-name-tooltip" th:text="${post.spec.owner}"></div>
-        </li>
-      </ul>
+      <time class="post-card-meta-date" th:datetime="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}" th:text="${#dates.format(post.spec.publishTime, 'YYYY 年 MM 月 dd 日')}"></time>
+      <!-- <ul class="author-list"> -->
+      <!--   <li class="author-list-item"> -->
+      <!--     <div class="author-name-tooltip" th:text="${post.spec.owner}"></div> -->
+      <!--   </li> -->
+      <!-- </ul> -->
     </footer>
   </div>
 </article>
