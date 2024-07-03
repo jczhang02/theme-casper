@@ -313,7 +313,7 @@ production stylesheet in assets/built/screen.css
 }
 
 .is-head-left-logo.home-template .gh-head:not(.is-header-hidden) .gh-head-menu {
-  margin-left: 40px;
+  margin-left: -40px;
 }
 
 @media (min-width: 992px) {
