@@ -611,6 +611,26 @@ production stylesheet in assets/built/screen.css
   }
 }
 
+.gh-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  font-weight: 500;
+  outline: none;
+}
+
+.gh-head-actions .gh-contact {
+  margin-right: -4px;
+  margin-top: 350px;
+}
+
 /* Search
 /* ---------------------------------------------------------- */
 
