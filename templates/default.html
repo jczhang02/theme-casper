@@ -29,7 +29,7 @@
             <span th:if="${#strings.isEmpty(site.logo)}" th:text="${site.title}"></span>
           </a>
           <button class="gh-search" aria-label="Search this site" th:if="${pluginFinder.available('PluginSearchWidget')}" onclick="SearchWidget.open()">
-            <th:block th:replace="~{partials/icons/search}" />
+            <th:block th:replace="~{partials/icons/searchtext}" />
           </button>
           <button class="gh-burger" aria-label="Main Menu"></button>
         </div>
@@ -43,7 +43,7 @@
         </nav>
         <div class="gh-head-actions">
           <button class="gh-search gh-icon-btn" th:if="${pluginFinder.available('PluginSearchWidget')}" onclick="SearchWidget.open()">
-            <th:block th:replace="~{partials/icons/search}" />
+            <th:block th:replace="~{partials/icons/searchtext}" />
           </button>
           <div class="gh-head-members">
           </div>
