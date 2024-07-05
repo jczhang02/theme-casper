@@ -436,7 +436,8 @@ production stylesheet in assets/built/screen.css
   align-items: center;
   margin-top: 350px;
   font-weight: 1000;
-  font-size: 28px;
+  font-size: 24px;
+  white-space: nowrap;
 }
 
 .gh-head-menu .nav {
@@ -622,13 +623,34 @@ production stylesheet in assets/built/screen.css
   background-color: transparent;
   border: 0;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 1000;
   outline: none;
+  white-space: nowrap;
 }
 
 .gh-head-actions .gh-contact {
   margin-right: -4px;
   margin-top: 350px;
+}
+
+/* add gh-contact mobile support */
+@media (max-width: 767px) {
+  .gh-contact {
+    display: flex;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gh-head-actions .gh-contact {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .gh-head-brand .gh-contact {
+    display: none;
+  }
 }
 
 /* Search
@@ -644,7 +666,7 @@ production stylesheet in assets/built/screen.css
   cursor: pointer;
   background-color: transparent;
   border: 0;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 1000;
   outline: none;
 }

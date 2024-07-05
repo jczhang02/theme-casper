@@ -12,5 +12,11 @@ spec:
   require: ">=2.8.0"
   author:
     name: Ghost Foundation
+  customTemplates:
+    post:
+      - name: 原始模板
+        description: 该主题原始模板（含封面和导航）
+        screenshot:
+        file: post-original.html
 metadata:
   name: theme-casper

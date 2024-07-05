@@ -23,45 +23,7 @@
   th:class="|${template} is-head-${theme.config.custom.navigation_layout} ${theme.config.custom.title_font} ${theme.config.custom.body_font}|"
   th:classappend="${theme.config.index.show_publication_cover} ? 'has-cover' : ''">
   <div class="viewport">
-    <header id="gh-head" class="gh-head outer"
-      th:calssappend="${theme.config.index.header_style} == 'Hidden' ? 'is-header-hidden' : ''">
-      <div class="gh-head-inner inner">
-        <div class="gh-head-brand">
-          <!-- <a class="gh-head-logo" th:classappend="${#strings.isEmpty(site.logo)} ? 'no-image' : ''" href="/"> -->
-          <!--   <img th:if="${not #strings.isEmpty(site.logo)}" th:src="${site.logo}" th:alt="${site.title}"/> -->
-          <!--   <span th:if="${#strings.isEmpty(site.logo)}" th:text="${site.title}"></span> -->
-          <!-- </a> -->
-          <button class="gh-search" aria-label="Search this site"
-            th:if="${pluginFinder.available('PluginSearchWidget')}" onclick="SearchWidget.open()">
-            <th:block th:replace="~{partials/icons/searchtext}" />
-          </button>
-          <button class="gh-contact" aria-label="Contact Email">
-            <th:block th:replace="~{partials/icons/contact}" />
-          </button>
-          <button class="gh-burger" aria-label="Main Menu"></button>
-        </div>
-        <nav class="gh-head-menu">
-          <ul class="nav" th:with="menu = ${menuFinder.getPrimary()}">
-            <li th:each="menuItem : ${menu.menuItems}">
-              <a th:href="@{${menuItem.status.href}}" th:target="${menuItem.spec.target?.value}"
-                th:text="${menuItem.status.displayName}">Menu</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="gh-head-actions">
-          <button class="gh-search gh-icon-btn" th:if="${pluginFinder.available('PluginSearchWidget')}"
-            onclick="SearchWidget.open()">
-            <th:block th:replace="~{partials/icons/searchtext}" />
-          </button>
-          <button class="gh-contact" aria-label="Contact Email">
-            <th:block th:replace="~{partials/icons/contact}" />
-          </button>
-          <div class="gh-head-members">
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="site-content">
+        <div class="site-content">
       <th:block th:replace="${content}" />
     </div>
     <footer class="site-footer outer">
@@ -77,8 +39,8 @@
             </li>
           </ul>
         </nav>
-        <!-- <div class="gh-powered-by"><a href="https://halo.run/" target="_blank" rel="noopener">Powered by -->
-        <!--     Halo</a></div> -->
+        <div class="gh-powered-by"><a href="https://halo.run/" target="_blank" rel="noopener">Powered by
+            Halo</a></div>
       </div>
       <halo:footer />
     </footer>

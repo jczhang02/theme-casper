@@ -2,7 +2,7 @@
 <html
   xmlns:th="https://www.thymeleaf.org"
   th:class="${theme.config.custom.color_scheme}"
-  th:replace="~{post-layout :: html(template = 'post-template', title = ${post.spec.title}, content = ~{::content})}"
+  th:replace="~{default :: html(template = 'post-template', title = ${post.spec.title}, content = ~{::content})}"
 >
   <th:block th:fragment="content">
     <main id="site-main" class="site-main">
