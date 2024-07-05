@@ -28,7 +28,6 @@ production stylesheet in assets/built/screen.css
 
 /* Import CSS reset and base styles */
 @import "global.css";
-@import("https://registry.npmmirror.com/lxgw-wenkai-screen-web/latest/files/style.css") 
 
 :root {
   /* Colours */
@@ -53,10 +52,10 @@ production stylesheet in assets/built/screen.css
      */
 
   /* Fonts */
-  --font-sans: -apple-system, BlinkMacSystemFont, "LXGW WenKai Screen", "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  --font-serif: "LXGW WenKai Screen", Georgia, Times, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "LXGW Wenkai Screen",
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-serif: "LXGW Wenkai Screen", Georgia, Times, serif;
   --font-mono: Menlo, Courier, monospace;
   /* 自定义新的跟字体大小变量替代 rem，避免评论插件字体大小与主题中字体大小差异太大 */
   --root-size: 10px;
@@ -631,7 +630,7 @@ production stylesheet in assets/built/screen.css
 
 .gh-head-actions .gh-contact {
   margin-right: -4px;
-  margin-top: 350px;
+  margin-top: -350px;
 }
 
 /* add gh-contact mobile support */
