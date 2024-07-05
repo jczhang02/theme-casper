@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{@site.locale}}" th:class="${theme.config.custom.color_scheme}">
 
+<html>
+<head>
+  </head>
+<body>
+  
+</body>
+</html>
+
 <head>
   <title th:text="${title}"></title>
   <meta charset="utf-8" />
@@ -10,7 +18,12 @@
   <link rel="preload" as="style" th:href="@{/assets/built/screen.css}" />
   <link rel="preload" as="script" th:href="@{/assets/built/casper.js}" />
   <link rel="stylesheet" type="text/css" th:href="@{/assets/built/screen.css}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-web/style.css" />
   <style th:inline="css">
+    body {
+      font-family: "LXGW WenKai Screen";
+      font-weight: normal;
+    }
     :root {
       --ghost-accent-color:
       /*[(${theme.config.custom.accent_color})]*/
