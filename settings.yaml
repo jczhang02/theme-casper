@@ -86,3 +86,15 @@ spec:
           name: show_recent_posts_footer
           label: 底部显示最近文章
           value: true
+    - group: link
+      label: 链接相关设置
+      formSchema:
+        - $formkit: select
+          name: target
+          label: 标签页打开方式
+          value: _blank
+          options:
+            - value: _blank
+              label: 新标签页打开
+            - value: _self
+              label: 当前页打开

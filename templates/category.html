@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" th:class="${theme.config.custom.color_scheme}"
-  th:replace="~{default :: html(template = 'tag-template', title = ${post.spec.title}, content = ~{::content})}">
+  th:replace="~{category-layout :: html(template = 'tag-template', title = ${post.spec.title}, content = ~{::content})}">
 <th:block th:fragment="content">
   <main id="site-main" class="site-main outer">
     <div class="inner posts">
@@ -16,7 +16,9 @@
               </header>
               <div class="post-card-excerpt">
                 <th:block th:text="${category.spec.description}" th:if="${not #strings.isEmpty(category.spec.description)}"></th:block>
-                <th:block th:text="|共有 ${category.postCount} 篇文章|" th:if="${#strings.isEmpty(category.spec.description)}"></th:block>
+                <ul th:if="${category.postCount == null}">
+                  <th:block th:text="|暂无文章|" th:if="${#strings.isEmpty(category.spec.description)}"></th:block>
+                </ul>
               </div>
             </div>
           </div>
